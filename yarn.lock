@@ -14,6 +14,14 @@
   resolved "https://registry.yarnpkg.com/@fastify/error/-/error-2.0.0.tgz#a9f94af56eb934f0ab1ce4ef9f0ced6ebf2319dc"
   integrity sha512-wI3fpfDT0t7p8E6dA2eTECzzOd+bZsZCJ2Hcv+Onn2b7ZwK3RwD27uW2QDaMtQhAfWQQP+WNK7nKf0twLsBf9w==
 
+"@fastify/mongodb@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@fastify/mongodb/-/mongodb-5.0.0.tgz#fdbf58db0e9717efef9dc882714f4cbe7bb4b4e0"
+  integrity sha512-dQVfyaFMTFBfRlCJcnwAISD0/M7l4Woz3t8u/nAFMa9Pvey691xVoTq3SRax3LYHWSrfps6jQwivw3LfdmJ6qA==
+  dependencies:
+    fastify-plugin "^3.0.0"
+    mongodb "^4.0.1"
+
 "@types/node@*":
   version "16.10.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.10.2.tgz#5764ca9aa94470adb4e1185fe2e9f19458992b2e"
@@ -328,14 +336,6 @@ fastify-mailer@^2.2.0:
   integrity sha512-ev4V8vXM/bNbFWSWBac1a1aLPjiCKdTgiO27mocrpyPnA8crwXEgKPIRBD3Gs2XVPprDyYdAEFjVJM0OJ9KRCg==
   dependencies:
     fastify-plugin "^3.0.0"
-
-fastify-mongodb@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/fastify-mongodb/-/fastify-mongodb-4.1.0.tgz#386205288965c4c9abb548e64704443a9f4893ce"
-  integrity sha512-GRptLLTMmrOkm6R9aO4hWofg4piz8InCyLvfPL0mIzllpR6T/KZNa7MZq2nw4qCfcT1UJymXDr/xYsKXKrwuEg==
-  dependencies:
-    fastify-plugin "^3.0.0"
-    mongodb "^4.0.1"
 
 fastify-plugin@^2.0.0:
   version "2.3.4"

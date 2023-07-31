@@ -6,6 +6,7 @@
   "author": "Adefuye Abayomi",
   "license": "MIT",
   "dependencies": {
+    "@fastify/mongodb": "5.0.0",
     "autoload": "^0.1.2",
     "axios": "^0.21.4",
     "cloudinary": "^1.27.1",
@@ -15,7 +16,6 @@
     "fastify-cors": "^6.0.2",
     "fastify-file-upload": "^3.0.0",
     "fastify-mailer": "^2.2.0",
-    "fastify-mongodb": "^4.1.0",
     "fastify-plugin": "^3.0.0",
     "fastify-static": "^4.2.3",
     "fastify-websocket": "^4.0.0",
