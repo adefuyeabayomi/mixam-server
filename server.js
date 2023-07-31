@@ -94,7 +94,7 @@ fastify.register(fastifyStatic,{
 //fastify.register(addSampleArticles);
 //fastify.register(addSamplePosts);
 //fastify.register(addSampleCourses);
-
+console.log("my environment var : HOST and PORT", process.env.HOST,process.env.PORT)
 // start server.
 async function start(){
     try{
