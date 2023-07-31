@@ -1,0 +1,40 @@
+{
+  "name": "mixam-api-services",
+  "version": "1.0.0",
+  "description": "This is the server that attends to all of mixams api calls",
+  "main": "server.js",
+  "author": "Adefuye Abayomi",
+  "license": "MIT",
+  "dependencies": {
+    "autoload": "^0.1.2",
+    "axios": "^0.21.4",
+    "cloudinary": "^1.27.1",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.29.0",
+    "fastify-autoload": "^3.13.0",
+    "fastify-cors": "^6.0.2",
+    "fastify-file-upload": "^3.0.0",
+    "fastify-mailer": "^2.2.0",
+    "fastify-mongodb": "^4.1.0",
+    "fastify-plugin": "^3.0.0",
+    "fastify-static": "^4.2.3",
+    "fastify-websocket": "^4.0.0",
+    "formidable": "^1.2.2",
+    "javascript-time-ago": "^2.3.13",
+    "js-time-ago": "^2.1.0",
+    "moment": "^2.29.1",
+    "mongodb": "^5.7.0",
+    "node-static": "^0.7.11",
+    "nodemailer": "^6.6.3",
+    "shuffle-array": "^1.0.1",
+    "timeago": "^1.6.7",
+    "ws": "^8.7.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "16.14.2"
+  },
+  "devDependencies": {}
+}
