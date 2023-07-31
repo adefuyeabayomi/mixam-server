@@ -55,9 +55,11 @@ fastify.register (fastifyCors,{
     maxAge : 36000,
 });
 // register fastify-static.
+/*
 fastify.register(fastifyStatic,{
     root : path.join(__dirname,'app-ui/dist')
 });
+*/
 
 //const addUsers = require("./utils/addUserData")
 //const sampleOp = require("./routes/sampleOp");
