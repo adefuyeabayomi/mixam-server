@@ -98,7 +98,7 @@ console.log("my environment var : HOST and PORT", process.env.HOST,process.env.P
 // start server.
 async function start(){
     try{
-        await fastify.listen(process.env.PORT,process.env.HOST,(err,addr)=>{
+        await fastify.listen(process.env.PORT  || 3000,process.env.HOST,(err,addr)=>{
             if(err){
                 console.error("AN ERROR OCCURED WHILE STARTING THE SERVER", err);
                 throw err;
