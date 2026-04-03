@@ -29,7 +29,12 @@ async function recoverPassword(fastify,options){
                 new_password : newPassword,
             }
             const formatName = "forgot_password";
-            options.mailer(formatName,formatOptions,mailOptions);
+           try {
+                const sent = await options.mailer(formatName,formatOptions,mailOptions);
+            } catch (err) {
+                console.log("Email failed but continuing:", err.message);
+            }
+
             return {
                 status : "success",
             }

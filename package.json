@@ -26,6 +26,8 @@
     "mongodb": "^5.7.0",
     "node-static": "^0.7.11",
     "nodemailer": "^6.6.3",
+    "nodemon": "2",
+    "pino": "8",
     "shuffle-array": "^1.0.1",
     "timeago": "^1.6.7",
     "ws": "^8.7.0"

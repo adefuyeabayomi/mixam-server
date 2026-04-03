@@ -8,35 +8,41 @@ let {emailFormats, parseEmailFormat} = require("./emailformats")
     new_password : "omolewa1122",
 })
  */
-function mailer ( formatName , formatOptions , options ){
-    let client = nodemailer;
-    let formats = emailFormats;
-    let user = emailUser;
-    let pass = userPassword;
-    console.log("format is array", typeof formats[formatName].format, Array.isArray(formats[formatName].format), formatName)
-    let emailHTML = parseEmailFormat(formats[formatName].format,formatOptions, Object.keys(formats[formatName]));
-    let transporter = client.createTransport({
-        service : "gmail",
+function mailer(formatName, formatOptions, options) {
+    return new Promise((resolve, reject) => {
+    let transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false, // IMPORTANT
         auth: {
-            user,
-            pass 
+            user: emailUser,
+            pass: userPassword
         }
     });
-    
-    const mailOptions = {
-        from : options.from,
-        to: options.to,
-        subject: options.subject,
-        html: emailHTML
-    }
 
-    transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
-      });
+        let emailHTML = parseEmailFormat(
+            emailFormats[formatName].format,
+            formatOptions,
+            Object.keys(emailFormats[formatName])
+        );
+
+        const mailOptions = {
+            from: options.from,
+            to: options.to,
+            subject: options.subject,
+            html: emailHTML
+        };
+
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+                return reject(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+                return resolve(info);
+            }
+        });
+    });
 }
 
 module.exports = mailer;
